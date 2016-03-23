@@ -1,0 +1,70 @@
+Javascript
+
+Why
+make websites respond to user interaction
+build apps and games 
+access information on the Internet
+organize and present data
+Knowledge
+length - .length - (ex) “Sarah”.length = 5
+comments //
+confirm boxes - will make the user confirm ‘OK’ or cancel
+confirm(“This is crazy!”);
+you can ask for input with a prompt
+prompt(“What is your favorite color?”);
+data comes in various types
+numbers - quantities; can do math with them; does not need quotes
+strings - sequences of characters, like the letters a-z and even numbers; useful as labels/names/content; does need quotes
+booleans - either true or false (ex) 23>10 is true but 23<10 is false
+comparison operators
+greater than >
+less than <
+less than or equal to <=
+greater than or equal to >=
+equal to ==
+!== not equal to
+console.log() - will take whatever is inside the parentheses and log it to the console below your code
+commonly called: printing out
+can be done with all data forms
+if statements - made up of the ‘if’ keyword, a condition like we’ve seen before, and a pair of curly brackets {}
+if the answer to the condition is yes, the code inside the curly races will run
+if the answer to the condition is no/false, include an ‘else’ clause in the code that will run instead
+symbols
+( ) - control order of operations
+* and / - multiplication and division
++ and - - addition and subtraction
+modulo - when a % is place btw two numbers, the computer will divide the first number by the second and then return the remainder of that
+23%10 = 2 with 3 left over, so evaluates to 3
+can be used in comparisons
+substrings - when you don’t want to display the entire string  but instead want to display some of it
+“some word” .substring(x,y)
+where x is where you start chopping and y is where you finish chopping the original string
+to select for the ‘he’ in ‘hello’, you would right “hello”. substring (0, 2);
+each character in a string is numbered starting from 0
+saving variables from coding - defining a variable with a specific, case-sensitive name; creating/declaring
+var varName=data; (ex) var myName = “Sarah”; var myAge=24;
+stores the value of the variable whether it is a number or a string
+how to change a variable’s value
+var myAge = “Twenty four”;
+myAge = “Twenty five”;
+input - ingredients
+output
+a function - a collection of inputs
+declare a function using var and then giving it a name; declares a variable with a name
+then use the function keyword to tell the computer that your are making a function and not something else
+indicate a parameter using code in the parentheses - is a placeholder word that we give a specific value when we call the function
+write a block of reusable code btw {}
+every line of code in this block must end with a ;
+var sayHello = function(name) {
+    console.log('Hello ' + name);
+};
+sayHello(“Emily”) would then print out Hello Emily
+can ‘call’ the function by typing the function’s name and putting a parameter value inside parentheses after it
+semi-colon acts like a period in a sentence
+DRY principle - don’t repeat yourself
+return keyword - when we want it to return a value; gives the programmer back the value that comes out of the function; function will stop running at this keyword and will ‘return’ the value
+when this is used with a function, the ‘return’ value is the result of running the function
+functions with two parameters - use the return function as well
+scope - can be global or local
+var used inside of a function - local scope
+var used outside of a function - global scope

@@ -1,0 +1,120 @@
+HTML/CSS
+
+all docs start with: <!DOCTYPE html>
+tags are like parenthesis - ex (<html> and </html> open and close a section of text)
+tags nest things in order 
+2 parts to html file: header and body
+header: contains information about your html file (title); <head> and </head>; <title> and </title> tags
+body: where you put your content (text, images, links); goes into the tags after the head and has the tags <body> and </body>
+headings and paragraphs
+paragraphs: start and end with tags <p> and </p>
+heading tags: <h1> and </h1>
+heading sizes range from <h1> (huge) to <h6> (tiny)
+hyperlinks - <a href=“https://www.yowza.com”> linkable description of site </a>
+done within the body
+adding images: use an image tag <img src=“url” />
+there is no closing tag here
+added within the body
+making the image clickable - placing the image tag in the <a href> </a> tag
+placing one HTML tag inside of another is called nesting - the last tag you open is the first one you close
+indentation - makes code more readable
+ordered lists: <ol> and </ol> with the items in each list <li> and </li>
+unordered lists: <ul> and </ul> with items in each list <li and </li>
+comments: start with <!- - and end with - -> 
+<!--I'm a comment!-->
+font size: giving tags more instructions requires including attributes in eh opening tag; style=“font-size: __px”
+color: change the color of font: style=“color: red”
+change color and font size: style”color: red; font-size: __px”
+change font type used: “font-family”
+change the color of the background: style=“background-color: red”
+aligning the text: style=“text-align: center/right/left”
+bolding words: <strong> and </strong>
+italicizing words: <em> and </em>
+tables: <table> and </table>
+table row: <tr> and </tr>
+table data: <td> and </td>
+adding a second table data cell = adding a second table column
+table head: containing information about the table <thead> and </thead>
+within this tag we have the added text in the <tr> <th> text </th> <th> text </th> </tr>
+table body: containing information about the data <tbody> and </tbody>
+table title: 
+need to use colspan to span multiple columns <th colspan=“3” (3 columns across) </th>
+<div>: allows you to divide your page into containers (different pieces)
+can make them clickable by wrapping them in <a></a> tags
+all pieces can be individually styled
+<span>: allows you to control styling of smaller parts of your page (text)
+similar to the bolding and italicizing of words
+can change color, font size, font family, etc.
+CSS
+stylesheet.css  - all css styling information - where html elements should go, what color they should be, how big they should be, etc.
+cascading style sheets
+style sheet: describes what an html file should look at
+<link>: applies the CSS style sheet to the HTML file in question
+should have 3 attributes: type should always be equal to “text/css”, rel should always be equal to “stylesheet, href should always point to the web address of the CSS file
+this is closed with a <link      />
+self-closing tags: <img />, <link />
+CSS syntax (all use curly brackets and semi-colons to end the style line btw them (how css knows your done with one pair and ready for the next)
+selector: can be any html element (<p>, <img> or <table>) without the <>
+property: aspect of a selector (font-family, color, font-size)
+value: possible setting for a property (color, font-family, etc.)
+can set many properties for one selector
+CSS comments: /*I'm a comment!*/
+need the /* and the */ before and after the entire statement to close things and comment them out
+colors are in the form of hexadecimal values: base-16: each digit can be number 0-9 or a letter a-f
+font-size unit em: relative measure - 1 em= the default font size on whatever screen the user is using - because the px is less versatile
+built in CSS font defaults: serif (little decorative bits on the ends of the strokes that make up letters), sans-serif (plain-looking font), cursive (scripty font)
+border property: can be especially useful with tables
+used as a sub element of ‘selector’ on the stylesheet
+links have all normal properties including ‘text-decoration’
+any HTML element can be a CSS selector
+can add stylistic attributes to certain HTML selectors by specifying the direct selector
+grabbing direct children (an element that is directly nested inside another element) with no other elements in between: use the > symbol
+can apply CSS styling to every element on the page - * selector
+branching - html to head to body to div to table to text
+an element is a child of every element wrapped around it and the direct child of the element closest to it
+certain selectors will ‘override’ others if they have a greater specificity value
+classes and IDs are more specific than even nested selectors
+classes: when have a bunch of elements that should all receive the same styling; class=“_red___” within the html elements; identified within CSS with a . -> .red
+IDs: good for one specific element with styling; assigned to html elements with the id=“___first__”; identified within CSS within a # -> #first
+pseudo-class selector - way of accessing HTML items that aren’t part of the document tree; lets us style these kinds of changes in our HTML document; can control the appearance of visited and unvisited links
+CSS syntax is -> selector:pseudo-class_selector {}
+a:link an unvisited link
+a:visited a visited link
+a:hover a link you are hovering your mouse over
+first child - used to apply styling to only the elements that are the first children of their parents - (ex) p:first-child would make all paragraphs that are the first children of their parent elements change
+nth child - used to select any child of an element after the first child - add the child number in parentheses after the pseudo-class selector - (ex) p :nth-child(2) would turn every paragraph that is the second child of it’s parent element
+make sure there’s a space between the html element and the :nth-child
+the element that is the (general) child, goes before the :nth-child
+multiple selectors
+class selectors
+ID selectors
+positioning - allows control over how pages look
+display property
+block: makes the element a block box; takes up the full width of the page
+inline-block: makes the element a block box; will allow other elements to sit next to it on the same line (better suited for HTML elements that are blocks by default (headers/paragraphs)
+inline: makes the element sit on the same line as another element (without formatting it like a block); takes up as much width is needed
+none: makes the element and it’s content disappear from the page entirely
+margin - space around the element; larger the margin=more space between our element and the elements around it
+auto: tells document to automatically put equal left/right margins on our element (centers it on the page)
+margin-top:, margin:right:, margin:left:, margin:bottom: OR set all margins at once, starting from the top and going clockwise - margin: 1px 2px 3px 4px;
+border - edge of the element
+padding - spacing between the content and the border; adjusted with CSS
+padding-top:, padding-right:, padding-bottom:, padding-left: OR set all padding at once, starting from the top and going clockwise - padding: px px px px; note: if all padding is the same, can declare the value px only once
+content - ‘stuff’ in the box
+TM = top margin
+TB = top border
+TP = top padding
+positive padding/margin: puts that space between the element and it’s reference (moves everything some amount of px to the right)
+negative padding/margin: moves everything some amount of px to the left
+float - putting elements on a page while acknowledging the flow of other elements on the page - float:right/left/etc.
+clear:left - will make an element move below any floating elements on the left side of he page
+same thing with clear:right
+clear:both - element will move below any floating elements on the left and right side of the page
+static - defaulted when an element’s positioning is not specified; i.e. where the element would normally go
+absolute positioning - position:absolute - positioned in relation to the first parent element it has that doesn’t have position:static
+if this other element does not exist, the element with position:absolute gets positioned relative to <html>
+relative positioning - tells the element to move relative to where it would have landed if it just had the default static positioning
+moves relative to where it otherwise would have been
+fixed positioning - anchors an element to the browser window
+is not affected by scrolling
+z-index property: measure of importance on the page; the higher an element’s z-index, the higher it will be ‘stacked’ on the page
